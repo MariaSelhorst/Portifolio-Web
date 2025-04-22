@@ -94,12 +94,12 @@ main {
     background-color: #444c56;
   }
 
-  .btn-repositorios {
+  .btn-repositorio {
     background-color: var(--primary__color); 
     color: white;
   }
   
-  .btn-repositorios:hover {
+  .btn-repositorio:hover {
     background-color: var(--sixth-color); 
   }
   

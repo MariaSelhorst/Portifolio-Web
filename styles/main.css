@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section {
+    width: 100%;
+    min-height: 96vh;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.main-section > div {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: auto;
+}
+
+.main-section > img {
+    object-fit: cover;
+    border: 30px solid var(--sixth-color);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    max-width: 95%;
+    filter: drop-shadow(0 0 15px var(--primary__color));
+}
+
+.main-section > div > a {
+    height: 1.5rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--grey-0);
+}
+
+.main-section h1 {
+    font-size: 4rem;
+}
+
+.main-section h2 {
+    font-size: 2rem;
+    line-height: 120%;
+}
+
+.main-section p {
+    line-height: 120%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .buttons a {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-github {
+    background-color: #24292e;
+    color: white;
+  }
+  
+  .btn-github:hover {
+    background-color: #444c56;
+  }
+
+  .btn-repositorios {
+    background-color: var(--primary__color); 
+    color: white;
+  }
+  
+  .btn-repositorios:hover {
+    background-color: var(--sixth-color); 
+  }
+  
+
+.footer {
+    width: 100%;
+    background-color: var(--grey-0);
+    color: var(--grey-9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.footer > a {
+    height: 1.5rem;
+    display: flex;
+    gap: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--grey-9);
+}
+
+@media (max-width: 500px) {
+    .main-section {
+        height: calc(100vh - 150px);
+        gap: 20px;
+    }
+
+    .main-section > img {
+        width: 200px;
+        height: 200px;
+        border: 15px solid var(--sixth-color);
+    }
+
+    .main-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-section p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+ 
+    }
+}

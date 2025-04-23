@@ -1,144 +1,143 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden
+    margin: 0; /* Remove as margens padrão do navegador */
+    padding: 0; /* Remove os espaçamentos internos padrão */
+    height: 100%; /* Define altura total da tela */
+    overflow: hidden /* Impede que a página tenha rolagem */
 }
 
 main {
-    flex: 1;
-    width: 100%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1; /* Ocupa o espaço restante disponível no container flex */
+    width: 100%; /* Largura total do elemento */
+    padding: 0; /* Remove espaçamento interno */
+    display: flex; /* Ativa o layout flexível */
+    align-items: center; /* Alinha verticalmente o conteúdo no centro */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
 }
 
 .main-section {
-    width: 100%;
-    min-height: 96vh;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    box-sizing: border-box;
+    width: 100%; /* Ocupa toda a largura disponível */
+    min-height: 96vh; /* Garante altura mínima de 96% da altura da tela */
+    padding: 0 2rem; /* Espaço interno nas laterais de 2rem */
+    display: flex; /* Layout flexível */
+    align-items: center; /* Alinhamento vertical centralizado */
+    justify-content: space-around; /* Espaço igual ao redor dos elementos filhos */
+    flex-wrap: wrap; /* Permite que elementos "quebrem" para a próxima linha */
+    gap: 30px; /* Espaçamento entre os elementos */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
 .main-section > div {
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    height: auto;
+    min-width: 200px; /* Define largura mínima para responsividade */
+    display: flex; /* Flex container */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    gap: 25px; /* Espaço vertical entre os filhos */
+    height: auto; /* Altura automática de acordo com o conteúdo */
 }
 
 .main-section > img {
-    object-fit: cover;
-    border: 30px solid var(--sixth-color);
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    max-width: 95%;
-    filter: drop-shadow(0 0 15px var(--primary__color));
+    object-fit: cover; /* Cobre toda a área mantendo proporção */
+    border: 30px solid var(--sixth-color); /* Borda grossa com cor definida em variável */
+    border-radius: 50%; /* Deixa a imagem circular */
+    width: 300px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    max-width: 95%; /* Não ultrapassa 95% da largura do container */
+    filter: drop-shadow(0 0 15px var(--primary__color)); /* Sombra ao redor da imagem */
 }
 
 .main-section > div > a {
-    height: 1.5rem;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-size: 2rem;
-    text-decoration: none;
-    color: var(--grey-0);
+    height: 1.5rem; /* Altura do link */
+    display: flex; /* Layout em linha */
+    gap: 10px; /* Espaço entre os elementos dentro do link */
+    align-items: center; /* Alinha verticalmente os itens */
+    font-size: 2rem; /* Tamanho da fonte */
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--grey-0); /* Cor do texto */
 }
 
 .main-section h1 {
-    font-size: 4rem;
+    font-size: 4rem; /* Título grande */
 }
 
 .main-section h2 {
-    font-size: 2rem;
-    line-height: 120%;
+    font-size: 2rem; /* Subtítulo */
+    line-height: 120%; /* Espaçamento entre linhas */
 }
 
 .main-section p {
-    line-height: 120%;
-    font-size: 1.2rem;
-    font-weight: bold;
+    line-height: 120%; /* Altura da linha para facilitar leitura */
+    font-size: 1.2rem; /* Tamanho médio do texto */
+    font-weight: bold; /* Negrito */
 }
 
 .buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .buttons a {
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .btn-github {
-    background-color: #24292e;
-    color: white;
-  }
-  
-  .btn-github:hover {
-    background-color: #444c56;
-  }
+    display: flex; /* Layout em linha */
+    gap: 1rem; /* Espaço entre os botões */
+    margin-top: 1rem; /* Espaço acima do grupo de botões */
+}
 
-  .btn-repositorio {
-    background-color: var(--primary__color); 
-    color: white;
-  }
-  
-  .btn-repositorio:hover {
-    background-color: var(--sixth-color); 
-  }
-  
+.buttons a {
+    padding: 0.75rem 1.5rem; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 1rem; /* Tamanho do texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave no hover */
+    cursor: pointer; /* Cursor de clique */
+}
+
+.btn-github {
+    background-color: #24292e; /* Cor escura padrão do GitHub */
+    color: white; /* Texto branco */
+}
+
+.btn-github:hover {
+    background-color: #444c56; /* Cor mais clara no hover */
+}
+
+.btn-repositorio {
+    background-color: var(--primary__color);  /* Cor personalizada do projeto */
+    color: white; /* Texto branco */
+}
+
+.btn-repositorio:hover {
+    background-color: var(--sixth-color);  /* Cor alternativa no hover */
+}
 
 .footer {
-    width: 100%;
-    background-color: var(--grey-0);
-    color: var(--grey-9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 20px;
-    box-sizing: border-box;
+    width: 100%; /* Largura total */
+    background-color: var(--grey-0); /* Cor de fundo escura */
+    color: var(--grey-9); /* Texto claro */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    gap: 20px; /* Espaço entre os itens */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo */
 }
 
 .footer > a {
-    height: 1.5rem;
-    display: flex;
-    gap: 10px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: var(--grey-9);
+    height: 1.5rem; /* Altura do link */
+    display: flex; /* Itens alinhados lado a lado */
+    gap: 10px; /* Espaço entre texto e imagem */
+    font-size: 1.2rem; /* Tamanho do texto */
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--grey-9); /* Cor clara */
 }
 
 @media (max-width: 500px) {
     .main-section {
-        height: calc(100vh - 150px);
-        gap: 20px;
+        height: calc(100vh - 150px); /* Reduz a altura da seção para dispositivos pequenos */
+        gap: 20px; /* Reduz o espaçamento */
     }
 
     .main-section > img {
-        width: 200px;
-        height: 200px;
-        border: 15px solid var(--sixth-color);
+        width: 200px; /* Diminui o tamanho da imagem */
+        height: 200px; /* Altura imagem */
+        border: 15px solid var(--sixth-color); /* Bordas mais finas */
     }
 
     .main-section h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Títulos menores */
     }
 
     .main-section h2 {
@@ -150,7 +149,6 @@ main {
     }
 
     .footer {
-        flex-direction: column;
- 
+        flex-direction: column; /* Empilha os elementos verticalmente */
     }
 }

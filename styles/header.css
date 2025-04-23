@@ -1,62 +1,63 @@
 header {
-    color: var(--grey-9);
-    padding: 10px;
-    background-color: var(--grey-0);
-    font-weight: bold;
+    color: var(--grey-9); /* Define a cor do texto do header como cinza claro */
+    padding: 10px; /* Espaçamento interno para afastar o conteúdo das bordas */
+    background-color: var(--grey-0); /* Fundo escuro para contraste */
+    font-weight: bold; /* Deixa o texto em negrito */
 
-    width: 100vw;
-    height: 60px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    height: 60px; /* Altura fixa para o header */
+    position: fixed; /* Fixa o header no topo da tela mesmo ao rolar */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
 
-    z-index: 3;
+    z-index: 3; /* Garante que o header fique acima de outros elementos */
 }
 
 .header_first {
-    width: 100%;
-    max-width: 95%;
-    
-    padding: 8px;
-    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    width: 100%; /* Largura total */
+    max-width: 95%; /* Limita a largura para evitar que fique muito esticado */
+    padding: 8px; /* Espaçamento interno */
+    display: flex; /* Layout em linha */
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-items: center; /* Alinha verticalmente os itens */
 }
+
 .header_first > ul {
-    display: flex;
-    gap: 50px;
+    display: flex; /* Lista em linha */
+    gap: 50px; /* Espaço entre os itens do menu */
 }
-.header_first a{
-    color: var(--grey-9);
-    text-decoration: none;
-    position: relative;
+
+.header_first a {
+    color: var(--grey-9); /* Cor dos links igual ao texto do header */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    position: relative; /* Necessário para posicionar o ::after */
 }
-.header_first a::after{
-    content: "";
-    width: 0;
-    background-color: var(--grey-9);
-    height: 2px;
-    position: absolute;
-    top: 120%;
+
+.header_first a::after {
+    content: ""; /* Elemento vazio para criar uma linha animada */
+    width: 0; /* Começa com largura zero */
+    background-color: var(--grey-9); /* Cor da linha */
+    height: 2px; /* Altura da linha */
+    position: absolute; /* Posicionamento relativo ao link */
+    top: 120%; /* Fica logo abaixo do link */
     left: 0;
     right: 0;
-    margin: auto;
-    transition: 0.3s;
-}
-.header_first a:hover::after{
-    width: 100%;
+    margin: auto; /* Centraliza horizontalmente */
+    transition: 0.3s; /* Animação suave */
 }
 
-.header_first h1{
-    font-size: 1rem;
-    position: absolute;
-    left: 80px;
+.header_first a:hover::after {
+    width: 100%; /* Ao passar o mouse, a linha se expande */
+}
 
+.header_first h1 {
+    font-size: 1rem; /* Tamanho pequeno para o nome */
+    position: absolute; /* Posicionamento fixo dentro do header */
+    left: 80px; /* Afastado da borda esquerda */
 }
 
 @media (max-width:760px) {
     .header_first ul {
-        display: none;
+        display: none; /* Esconde o menu em telas pequenas para adaptar o layout */
     }
 }
